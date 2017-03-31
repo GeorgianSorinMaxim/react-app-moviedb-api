@@ -4,6 +4,7 @@ The user can filter the displayed data using the provided input field and search
 
 # Dependencies
     $ npm install --save axios
+    $ npm install --save react-search-input
 
 # Run the app
     $ npm start
