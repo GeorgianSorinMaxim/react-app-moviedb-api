@@ -3,7 +3,7 @@ import Search from './search';
 
 const QueryMovies = () => {
   return (
-    <div className="">
+    <div>
       <Search />
     </div>
   );

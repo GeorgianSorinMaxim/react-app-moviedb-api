@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import OnTvNow from './components/onTvNow';
 import Header from './components/header';
 import QueryMovies from './components/queryMovies';
 import LatestMovies from './components/latestMovies';
@@ -14,8 +15,7 @@ class App extends Component {
 
         <QueryMovies />
 
-        <hr className="separator" />
-        <br /><br />
+        <OnTvNow />
 
         <LatestMovies />
       </div>

@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import getData from '../services/getData';
 import Results from './results';
 
+import '../css/App.css';
+
 class Search extends Component {
   constructor() {
     super();
@@ -34,7 +36,7 @@ class Search extends Component {
 
   render() {
     return (
-        <div className="">
+        <div>
           <form>
             <input
               type="text"
@@ -44,8 +46,8 @@ class Search extends Component {
               ref={(input) => { this.textInput = input; }} />
           </form>
 
-          <div className="">
-            {this.state.data && <Results data={this.state.data} />}
+          <div>
+            {this.state.data && <Results data={this.state.data} query={this.textInput.value} />}
           </div>
         </div>
     );

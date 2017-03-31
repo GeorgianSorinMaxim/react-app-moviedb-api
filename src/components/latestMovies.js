@@ -5,6 +5,8 @@ import getData from '../services/getData';
 
 import List from './list';
 
+import '../css/App.css';
+
 const KEYS_TO_FILTERS = ['title', 'overview'];
 
 class LatestMovies extends Component {
@@ -40,13 +42,13 @@ class LatestMovies extends Component {
     }
 
     return (
-      <div>
+      <div className="latestMovies">
         { this.state.data && <h2>Discover the latest movies on TheMovieDb</h2> }
 
-        { this.state.data && <SearchInput className="search-input" onChange={this.searchUpdated} /> }
+        { this.state.data && <SearchInput className="search-input" onChange={this.searchUpdated} placeholder="Search the latest movies" /> }
 
         <div className="container">
-          { this.state.data && <List data={filteredData} /> }
+          { this.state.data && <List data={filteredData} query={this.state.searchTerm}/> }
           { !this.state.data && <p>No data found</p> }
         </div>
       </div>

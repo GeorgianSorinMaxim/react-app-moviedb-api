@@ -2,13 +2,6 @@
   text-align: center;
 }
 
-hr {
-  width: 80%;
-  height: 10px;
-  border-radius: 40px;
-  background-color: #8056EA;
-}
-
 .inputField, input[type=search] {
   margin: 0;
   border: 0;
@@ -36,6 +29,19 @@ hr {
   animation: App-logo-spin infinite 20s linear;
 }
 
+.autocompleteContainer {
+  width: 50%;
+  height: 300px;
+  overflow: scroll;
+  text-align: center;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.latestMovies {
+  margin-top: 100px;
+}
+
 .item {
   padding: 20px;
   text-align: center;
@@ -44,6 +50,23 @@ hr {
 .thumbFloat {
   float: left;
   margin-right: 10px;
+}
+
+.thumbSearch {
+  height: 60px;
+}
+
+.itemTitleSearch {
+  margin: 0px;
+  padding-top: 8px;
+  font-weight: bold;
+}
+
+.itemReleaseSearch {
+  margin: 0px;
+  color: #bababa;
+  padding-top: 5px;
+  font-weight: lighter;
 }
 
 .thumb {
@@ -69,6 +92,15 @@ hr {
 .itemOverview {
   color: #666666;
   font-weight: lighter;
+}
+
+.onTv {
+  width: 70%;
+}
+
+.noResults {
+  margin-top: 120px;
+  font-style: italic;
 }
 
 @keyframes App-logo-spin {

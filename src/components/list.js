@@ -21,8 +21,8 @@ const List = (props) => {
   });
 
   return (
-    <div className="">
-      {print.length ? print : <p>No results found</p>}
+    <div>
+      {print.length ? print : <p>No results found for <i>{props.query}</i></p>}
     </div>
   );
 };

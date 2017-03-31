@@ -1,12 +1,13 @@
 import React from 'react';
 
-import List from './list';
+import '../css/App.css';
+
+import Autocomplete from './autocomplete';
 
 const Results = (props) => {
   return (
-    <div className="listContainer">
-      { props.data.results && <List data={props.data.results} /> }
-      { !props.data.results && <p>No data found</p> }
+    <div className="App">
+      { props.data.results && <Autocomplete data={props.data.results} query={props.query} /> }
     </div>
   );
 };
