@@ -5,9 +5,12 @@ The user can filter the displayed data using the provided input field and search
 # Dependencies
     $ npm install --save axios
     $ npm install --save react-search-input
+    $ npm install --save-dev jest babel-jest babel-preset-es2015 babel-preset-react react-test-renderer
 
 # Run the app
     $ npm start
 
 # Unit testing
 TODO
+
+    $ npm test
