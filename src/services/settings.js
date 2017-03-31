@@ -5,5 +5,7 @@ const latestMovies = `${baseUrl}discover/movie?sort_by=popularity.desc&api_key=$
 
 export default {
   imgUrl,
+  apiKey,
+  baseUrl,
   latestMovies,
 };

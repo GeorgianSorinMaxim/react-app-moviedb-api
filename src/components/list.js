@@ -6,15 +6,15 @@ import settings from '../services/settings';
 const List = (props) => {
   const print = props.data.map((item) => {
     return (
-      <div className="" key={item.id}>
-        <div className="">
-          <h2 className="">{item.title}</h2>
-          <p className="">{item.overview}</p>
-          <p className="">Release date: {item.release_date}</p>
-          <p className="">Vote average: {item.vote_average}</p>
-          <p className="">Vote count: {item.vote_count}</p>
-          <p className="">Popularity: {item.popularity}</p>
-          <img className="" src={`${settings.imgUrl}${item.poster_path}`} alt={item.title} />
+      <div className="item" key={item.id}>
+        <div className="thumbFloat">
+          { item.poster_path && <img className="thumb" src={`${settings.imgUrl}${item.poster_path}`} alt={item.title} /> }
+        </div>
+
+        <div className="movieDataFloat">
+          <p className="itemTitle">{item.title}</p>
+          <p className="itemRelease">{item.release_date}</p>
+          <p className="itemOverview">{item.overview}</p>
         </div>
       </div>
     );
@@ -22,7 +22,7 @@ const List = (props) => {
 
   return (
     <div className="">
-      {print}
+      {print.length ? print : <p>No results found</p>}
     </div>
   );
 };

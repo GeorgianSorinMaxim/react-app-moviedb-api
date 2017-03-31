@@ -6,6 +6,7 @@
     "axios": "^0.15.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-grid-layout": "^0.14.4",
     "react-search-input": "^0.10.4"
   },
   "devDependencies": {
