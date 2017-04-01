@@ -3,7 +3,7 @@ import SearchInput, {createFilter} from 'react-search-input'
 
 import getData from '../services/getData';
 
-import List from './list';
+import List from './AppMovieList';
 
 import '../css/App.css';
 

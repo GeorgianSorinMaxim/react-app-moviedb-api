@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../css/App.css';
 
-import Autocomplete from './autocomplete';
+import Autocomplete from './AppAutocomplete';
 
 const Results = (props) => {
   return (

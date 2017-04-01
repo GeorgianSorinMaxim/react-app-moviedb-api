@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import getData from '../services/getData';
-import Results from './results';
+import Results from './AppSearchResults';
 
 import '../css/App.css';
 
@@ -36,7 +36,7 @@ class Search extends Component {
 
   render() {
     return (
-        <div>
+        <div className="App">
           <form>
             <input
               type="text"

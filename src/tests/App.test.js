@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import settings from './services/settings';
+import settings from '../services/settings';
 
 import axios from 'axios';
 import httpAdapter from 'axios/lib/adapters/http'
