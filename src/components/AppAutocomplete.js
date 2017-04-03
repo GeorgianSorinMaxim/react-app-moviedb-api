@@ -8,7 +8,11 @@ const Autocomplete = (props) => {
     return (
       <div className="item" key={item.id}>
         <div className="thumbFloat">
-          { item.poster_path && <img className="thumbSearch" src={`${settings.imgUrl}${item.poster_path}`} alt={item.title} /> }
+          { item.poster_path &&
+            <img
+              alt={item.title}
+              className="thumbSearch"
+              src={`${settings.imgUrl}${item.poster_path}`} /> }
         </div>
 
         <div className="movieDataFloat">
@@ -21,7 +25,9 @@ const Autocomplete = (props) => {
 
   return (
     <div className="autocompleteContainer">
-      {print.length ? print : <p className="noResults">No results found for <i>{props.query}</i></p>}
+      {print.length
+        ? print
+        : <p className="noResults">No results found using <b>{props.query}</b></p>}
     </div>
   );
 };

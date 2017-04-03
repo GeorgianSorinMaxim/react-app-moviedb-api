@@ -10,6 +10,6 @@ const OnTvNow = () => {
       <img className="onTv" src={image} alt="onTv" />
     </div>
   );
-}
+};
 
 export default OnTvNow;

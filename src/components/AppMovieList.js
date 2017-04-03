@@ -8,7 +8,11 @@ const List = (props) => {
     return (
       <div className="item" key={item.id}>
         <div className="thumbFloat">
-          { item.poster_path && <img className="thumb" src={`${settings.imgUrl}${item.poster_path}`} alt={item.title} /> }
+          { item.poster_path &&
+            <img
+              alt={item.title}
+              className="thumb"
+              src={`${settings.imgUrl}${item.poster_path}`} /> }
         </div>
 
         <div className="movieDataFloat">
@@ -22,7 +26,9 @@ const List = (props) => {
 
   return (
     <div>
-      {print.length ? print : <p>No results found for <i>{props.query}</i></p>}
+      {print.length
+        ? print
+        : <p>No results found for <b>{props.query}</b></p>}
     </div>
   );
 };

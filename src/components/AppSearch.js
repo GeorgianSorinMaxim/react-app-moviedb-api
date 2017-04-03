@@ -10,28 +10,29 @@ class Search extends Component {
     super();
 
     this.state = {
-      data: null,
+      data: null
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  // When inputted string changes in the field, the component should make call for querying for the data
-  handleChange(e) {
-    if (e.target.value !== '') {
-      this.queryData(e.target.value);
+  // When inputted string changes in the field, the component should make call
+  // for querying for the data
+  handleChange(ev) {
+    if (ev.target.value !== '') {
+      this.queryData(ev.target.value);
     } else {
       const data = {};
+
       this.setState({ data });
     }
   }
 
   // Query MovieDb based on the inputted string in the input field
   queryData(value) {
-    getData.getMoviesByQuery(value)
-      .then(data => {
-        this.setState({ data })
-      });
+    getData.getMoviesByQuery(value).then(data => {
+      this.setState({ data });
+    });
   }
 
   render() {
@@ -43,11 +44,14 @@ class Search extends Component {
               className="inputField"
               placeholder="Find Movies"
               onChange={this.handleChange}
-              ref={(input) => { this.textInput = input; }} />
+              ref={(input) => {
+                this.textInput = input;
+              }} />
           </form>
 
           <div>
-            {this.state.data && <Results data={this.state.data} query={this.textInput.value} />}
+            {this.state.data &&
+              <Results data={this.state.data} query={this.textInput.value} />}
           </div>
         </div>
     );

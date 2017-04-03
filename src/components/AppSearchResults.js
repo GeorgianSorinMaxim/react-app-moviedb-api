@@ -7,7 +7,8 @@ import Autocomplete from './AppAutocomplete';
 const Results = (props) => {
   return (
     <div className="App">
-      { props.data.results && <Autocomplete data={props.data.results} query={props.query} /> }
+      { props.data.results && <Autocomplete data={props.data.results}
+        query={props.query} /> }
     </div>
   );
 };

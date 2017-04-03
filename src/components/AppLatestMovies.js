@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchInput, {createFilter} from 'react-search-input'
+import SearchInput, {createFilter} from 'react-search-input';
 
 import getData from '../services/getData';
 
@@ -15,16 +15,17 @@ class LatestMovies extends Component {
 
     this.state = {
       data: [],
-      searchTerm: '',
+      searchTerm: ''
     };
 
     this.searchUpdated = this.searchUpdated.bind(this);
   }
 
-  // Get the data by calling getData.getMovies()
+  // Get the data by calling getData.getMovies() once the component is ready
   componentDidMount() {
     getData.getMovies().then(res => {
       const data = res.results;
+
       this.setState({ data });
     });
   }
@@ -38,14 +39,19 @@ class LatestMovies extends Component {
     let filteredData = [];
 
     if (this.state.data) {
-      filteredData = this.state.data.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
+      filteredData = this.state.data.filter(createFilter(this.state.searchTerm,
+        KEYS_TO_FILTERS));
     }
 
     return (
       <div className="latestMovies">
         { this.state.data && <h2>Discover the latest movies on TheMovieDb</h2> }
 
-        { this.state.data && <SearchInput className="search-input" onChange={this.searchUpdated} placeholder="Search the latest movies" /> }
+        { this.state.data &&
+          <SearchInput
+            className="search-input"
+            onChange={this.searchUpdated}
+            placeholder="Search the latest movies" /> }
 
         <div className="container">
           { this.state.data && <List data={filteredData} query={this.state.searchTerm}/> }
